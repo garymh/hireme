@@ -4,152 +4,70 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>gary holtz wants a job</title>
-    <style>
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        background: #fff;
-        color: #000;
-        font-family: "Courier New", Courier, monospace;
-        font-size: clamp(1.125rem, 2vw, 1.75rem);
-        line-height: 1.5;
-        padding: clamp(1rem, 4vw, 3rem);
-        max-width: 100%;
-        overflow-x: hidden;
-      }
-
-      h1,
-      h2,
-      h3 {
-        font-family: Helvetica, Arial, sans-serif;
-        font-weight: 700;
-        line-height: 1.05;
-        text-transform: uppercase;
-        letter-spacing: -0.02em;
-        margin-bottom: 0.5em;
-      }
-
-      h1 {
-        font-size: clamp(4rem, 18vw, 15rem);
-        margin-top: 0.2em;
-        word-break: break-word;
-      }
-
-      h2 {
-        font-size: clamp(2.5rem, 10vw, 8rem);
-        margin-top: 1.2em;
-      }
-
-      h3 {
-        font-size: clamp(1.5rem, 5vw, 3rem);
-        margin-top: 1em;
-      }
-
-      p {
-        max-width: 55ch;
-        margin-bottom: 1.2em;
-      }
-
-      a {
-        color: #000;
-        text-decoration: underline;
-        text-underline-offset: 0.15em;
-        text-decoration-thickness: 0.1em;
-      }
-
-      a:hover,
-      a:focus {
-        background: #000;
-        color: #fff;
-        outline: none;
-      }
-
-      button,
-      .button {
-        display: inline-block;
-        font-family: inherit;
-        font-size: clamp(1rem, 2vw, 1.5rem);
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.02em;
-        color: #000;
-        background: #fff;
-        border: 2px solid #000;
-        border-radius: 0;
-        padding: 0.6em 1.2em;
-        cursor: pointer;
-        text-decoration: none;
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
-      }
-
-      button:hover,
-      .button:hover,
-      button:focus,
-      .button:focus {
-        background: #000;
-        color: #fff;
-        outline: none;
-      }
-
-      table {
-        border-collapse: collapse;
-        width: 100%;
-        max-width: 100%;
-        font-size: clamp(1rem, 2vw, 1.5rem);
-        margin-bottom: 1.5em;
-      }
-
-      td {
-        border: 2px solid #000;
-        padding: 0.4em 0.6em;
-      }
-
-      iframe {
-        border: 2px solid #000;
-      }
-    </style>
+    <script>
+      (function () {
+        const saved = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        const theme = saved || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <button
+      id="theme-toggle"
+      class="theme-toggle"
+      type="button"
+      aria-label="Toggle theme"
+    >
+      ☾
+    </button>
     <header>
-      <h1>hi i'm gary</h1>
+      <h1>hi i'm gary 👋</h1>
     </header>
 
     <section>
       <p>i would like a job</p>
-      <p>im pretty good at making the backend of websites</p>
+      <p>i'm pretty good at making websites faster and CLIs better</p>
       <p>as you can tell i also dabble in frontend and design</p>
-      <p>check this out</p>
-      <button type="button" onclick="alert('yo')" style="margin-bottom: 2em">
-        click me
-      </button>
-      <p>slick, right?</p>
-      <p>my resume is <a href="#">here</a></p>
+      <p>check this out:</p>
+      <button type="button" onclick="alert('yo')">click me</button>
+      <p>sick, right?</p>
       <p>
-        i used to work at
-        <a href="https://gitlab.com"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 380 380"
-            style="height: 1em; vertical-align: -0.15em"
-          >
-            <path
-              fill="#171321"
-              d="M282.83,170.73l-.27-.69-26.14-68.22a6.81,6.81,0,0,0-2.69-3.24,7,7,0,0,0-8,.43,7,7,0,0,0-2.32,3.52l-17.65,54H154.29l-17.65-54A6.86,6.86,0,0,0,134.32,99a7,7,0,0,0-8-.43,6.87,6.87,0,0,0-2.69,3.24L97.44,170l-.26.69a48.54,48.54,0,0,0,16.1,56.1l.09.07.24.17,39.82,29.82,19.7,14.91,12,9.06a8.07,8.07,0,0,0,9.76,0l12-9.06,19.7-14.91,40.06-30,.1-.08A48.56,48.56,0,0,0,282.83,170.73Z"
-            /></svg
-          >GitLab</a
-        >. i was in charge of
-        <a href="https://docs.gitlab.com/cli/">this thing</a>. it got pretty
-        popular!
+        i most recently worked at at
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 380 380"
+          style="height: 1em; margin-right: 0.15em; vertical-align: -0.15em"
+        >
+          <path
+            fill="#171321"
+            d="M282.83,170.73l-.27-.69-26.14-68.22a6.81,6.81,0,0,0-2.69-3.24,7,7,0,0,0-8,.43,7,7,0,0,0-2.32,3.52l-17.65,54H154.29l-17.65-54A6.86,6.86,0,0,0,134.32,99a7,7,0,0,0-8-.43,6.87,6.87,0,0,0-2.69,3.24L97.44,170l-.26.69a48.54,48.54,0,0,0,16.1,56.1l.09.07.24.17,39.82,29.82,19.7,14.91,12,9.06a8.07,8.07,0,0,0,9.76,0l12-9.06,19.7-14.91,40.06-30,.1-.08A48.56,48.56,0,0,0,282.83,170.73Z"
+          /></svg
+        ><a href="https://gitlab.com">GitLab</a>. i made your
+        <strike>pull</strike> merge request experience smoother and quicker.
       </p>
-      <p>i even made a really dumb video about one of the features:</p>
-      <div style="margin: 1.5em 0; max-width: 100%">
+
+      <p>
+        i was also in charge of
+        <a href="https://docs.gitlab.com/cli/">this thing</a>.
+      </p>
+
+      <p>
+        people around the office called me "mr. glab"!<span
+          class="tip"
+          data-tip="that's a lie. we didn't even have an office."
+          >*</span
+        >
+      </p>
+      <p>
+        but i was talked into making a really dumb video about one of the
+        features:
+      </p>
+      <div style="margin: 3.5em 0; max-width: 100%">
         <iframe
           width="560"
           height="315"
@@ -165,57 +83,283 @@
             picture-in-picture;
           "
           allowfullscreen
-          style="max-width: 100%; border: 0.15em solid #000"
         ></iframe>
       </div>
-      <p>
-        i promise i'm a lot better at programming than i am at making videos
-      </p>
+      <p>i'm a lot better at programming than i am at making videos</p>
       <p>here are some of my cool skills:</p>
-      <table>
-        <tbody>
-          <tr>
-            <td>ruby on rails*</td>
-            <td>golang</td>
-            <td>typescript/js</td>
-          </tr>
-          <tr>
-            <td>postgresql</td>
-            <td>snappy comebacks</td>
-            <td>shell/bash</td>
-          </tr>
-          <tr>
-            <td>double-jointed in left hand</td>
-            <td>diffing algorithms</td>
-            <td>high caffeine tolerance</td>
-          </tr>
-          <tr>
-            <td>redis</td>
-            <td>pretty good pirate voice</td>
-            <td>sidekiq</td>
-          </tr>
-          <tr>
-            <td>really good sense of smell</td>
-            <td>security releases</td>
-            <td>database optimization</td>
-          </tr>
-          <tr>
-            <td>very organized sock drawer</td>
-            <td>architecture design</td>
-            <td>graphql</td>
-          </tr>
-          <tr>
-            <td>python</td>
-            <td>large scale migrations</td>
-            <td>ci/cd pipelines</td>
-          </tr>
-          <tr>
-            <td>docker</td>
-            <td>api design</td>
-            <td>sleight of hand card tricks</td>
-          </tr>
-        </tbody>
-      </table>
+      <ul class="skills-grid">
+        <li>
+          ruby on rails<span
+            class="tip"
+            data-tip="i was actually using rails 0.13.1 to work on sudoku project in college in 2005. that's 21 years of experience by my math!"
+            >*</span
+          >
+        </li>
+        <li>golang</li>
+        <li>typescript/js</li>
+        <li>postgresql/mysql</li>
+        <li>snappy comebacks</li>
+        <li>shell/bash/zsh</li>
+        <li>database optimization</li>
+        <li>diffing algorithms</li>
+        <li>really likes dogs</li>
+        <li>redis</li>
+        <li>sleight of hand card tricks</li>
+        <li>sidekiq</li>
+        <li>really good sense of smell</li>
+        <li>security releases</li>
+        <li>double-jointed in left hand</li>
+        <li>architecture design</li>
+        <li>very organized sock drawer</li>
+        <li>graphql</li>
+        <li>python</li>
+        <li>large scale migrations</li>
+        <li>ci/cd pipelines</li>
+        <li>docker</li>
+        <li>api design/gRPC</li>
+        <li>performance engineering</li>
+        <li>distributed systems</li>
+        <li>observability</li>
+        <li>pretty good pirate voice</li>
+      </ul>
     </section>
+
+    <p>
+      my resume is
+      <a
+        href="#"
+        onclick="
+          document.getElementById('resume-modal').classList.add('open');
+          return false;
+        "
+        >here</a
+      >
+    </p>
+    <p>my linkedin is <a href="https://www.linkedin.com/in/gholtz/">here</a></p>
+    <p>
+      shoot me an
+      <a
+        href="#"
+        onclick="
+          document.getElementById('contact-modal').classList.add('open');
+          return false;
+        "
+        >email</a
+      >
+      if you want to talk jobs
+    </p>
+    <p>
+      or if you want to talk
+      <span class="tip-gif">G.O.B.s<img src="gob.gif" alt="" /></span>
+    </p>
+
+    <div
+      id="contact-modal"
+      class="modal-overlay"
+      onclick="if (event.target === this) this.classList.remove('open');"
+    >
+      <div class="modal">
+        <button
+          class="modal-close"
+          type="button"
+          onclick="
+            document.getElementById('contact-modal').classList.remove('open')
+          "
+        >
+          &times;
+        </button>
+        <h2>contact me</h2>
+        <form id="contact-form">
+          <label for="contact-name">name</label>
+          <input
+            type="text"
+            id="contact-name"
+            name="name"
+            maxlength="140"
+            required
+          />
+          <label for="contact-email">email</label>
+          <input
+            type="email"
+            id="contact-email"
+            name="email"
+            maxlength="140"
+            required
+          />
+          <label for="contact-message">message</label>
+          <textarea
+            id="contact-message"
+            name="body"
+            maxlength="500"
+            required
+          ></textarea>
+          <button type="submit">send</button>
+          <div class="form-status" id="form-status"></div>
+        </form>
+      </div>
+    </div>
+
+    <div
+      id="resume-modal"
+      class="modal-overlay"
+      onclick="if (event.target === this) this.classList.remove('open');"
+    >
+      <div class="modal">
+        <button
+          class="modal-close"
+          type="button"
+          onclick="
+            document.getElementById('resume-modal').classList.remove('open')
+          "
+        >
+          &times;
+        </button>
+        <h2>resume</h2>
+        <div class="resume-content">
+          <h3>summary</h3>
+          <p>
+            Senior-level backend engineer who owns products, not just features.
+            20 years in Ruby, 6+ years at GitLab building mission-critical
+            Rails, Go, and AI services. Built and scaled a developer CLI to 128k
+            monthly active users. Maintainer of three production codebases.
+          </p>
+
+          <h3>experience</h3>
+          <h4 class="job">Backend Engineer → Senior Backend Engineer</h4>
+          <p>GitLab · Remote · Jan 2020 – Jun 2026</p>
+          <h4>Engineering DRI — Official GitLab CLI (glab)</h4>
+          <ul>
+            <li>
+              Designed and built a stacked diffs workflow from scratch: full
+              lifecycle management of dependent pull request chains, from
+              proof-of-concept to shipped product.
+            </li>
+            <li>
+              Sole maintainer of the security fork: partnered with AppSec to
+              resolve directory traversal, PII leaks, user enumeration, and
+              access control bypasses across multiple release versions.
+            </li>
+            <li>Orchestrated 30+ releases, grew MAU from 2,500 to 128,000.</li>
+            <li>
+              Automated the Homebrew release pipeline, reducing a multi-step
+              manual process to a single action.
+            </li>
+            <li>
+              Built a privacy-respecting telemetry system end-to-end, enabling
+              data-driven product decisions: Rails events, Redis counters, Go
+              instrumentation, user opt-out.
+            </li>
+            <li>
+              Reviewed 70+ community contributions and mentored 30+ open-source
+              contributors on architecture, testing, and code quality.
+            </li>
+            <li>
+              Built a team of 20 reviewers and 8 maintainers to scale the
+              project.
+            </li>
+          </ul>
+          <h4>Rails Monolith</h4>
+          <ul>
+            <li>
+              Shipped AI-powered code review features end-to-end across a Rails
+              app, Go CLI, and AI gateway, managing production rollout.
+            </li>
+            <li>
+              Migrated a major code review feature from a paid tier to the
+              open-source core, decoupling tightly bound code across a 4
+              million+ line monolith.
+            </li>
+            <li>
+              Developed the backend for a next-generation diff rendering system.
+            </li>
+            <li>
+              Redesigned a portion of the core diff comparison algorithm and
+              shipped it as the platform default, eliminating misleading
+              artifacts for millions of users.
+            </li>
+            <li>
+              Reviewed 530+ merge requests across multiple codebases; promoted
+              to maintainer for 3 projects (Rails monolith, Go CLI, GitLab
+              developer toolkit).
+            </li>
+            <li>
+              Resolved a high-profile data integrity bug for a 12,000-license
+              enterprise customer, restoring trust and strengthening the
+              relationship.
+            </li>
+          </ul>
+          <h4 class="job">Software Developer → Senior Software Developer</h4>
+          <p>Northwestern University · Chicago, IL · Feb 2012 – Jan 2020</p>
+          <ul>
+            <li>
+              Lead developer for a Rails application managing PII for 500+
+              faculty members and physicians.
+            </li>
+            <li>
+              Converted a 50,000-line legacy ColdFusion/Oracle application to
+              Rails and PostgreSQL.
+            </li>
+            <li>
+              Sole maintainer of LatticeGrid, a Rails app for scholarly
+              publications and inter-programmatic relationship analysis.
+            </li>
+            <li>
+              Modernized team infrastructure: Ansible/Vagrant configuration for
+              a grant management system; Docker configurations to streamline
+              developer onboarding.
+            </li>
+            <li>Mentored developers on Git and Ruby fundamentals.</li>
+          </ul>
+          <h4 class="job">IT Consultant → Senior IT Consultant</h4>
+          <p>IBM · Fairfax, VA · Jul 2006 – Feb 2012</p>
+          <ul>
+            <li>
+              Led development for US Air Force and Army clients (Rails, Visual
+              Basic).
+            </li>
+            <li>
+              Additional clients: Spirit AeroSystems, US Army — Army Career
+              Tracker (ACT).
+            </li>
+          </ul>
+
+          <h3>skills</h3>
+          <h4>Languages:</h4>
+          <p>
+            Ruby (20+ yrs), Go (4+ yrs), TypeScript (4+ yrs), SQL/PostgreSQL,
+            JavaScript (Vue.js, React), Shell/Bash
+          </p>
+          <h4>Frameworks:</h4>
+          <p>Ruby on Rails, RSpec, GraphQL, REST API design, Sidekiq</p>
+          <h4>Infrastructure:</h4>
+          <p>
+            Git internals (diff algorithms, ref management, RPC integration),
+            CI/CD (goreleaser, Homebrew automation, security releases), Redis,
+            Docker, Ansible/Vagrant
+          </p>
+          <h4>Architecture:</h4>
+          <p>
+            DB optimization (N+1 elimination, preloading, bulk inserts, async
+            indexing, partitioning), Large-scale migrations, API design (REST,
+            GraphQL, backward compatibility)
+          </p>
+          <h4>AI/ML:</h4>
+          <p>
+            AI-powered code review (summaries, automated review, AI-assisted
+            CLI), Cross-service delivery (Rails, CLI, AI Gateway), GitLab Duo,
+            Claude, OpenCode
+          </p>
+
+          <h3>education</h3>
+          <p>
+            B.S. in Information Science and Technology<br />The Pennsylvania
+            State University<br />University Park, PA · 2002 – 2006
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
   </body>
 </html>
