@@ -16,7 +16,7 @@
   updateIcon();
 })();
 
-const SUPABASE_URL = "https://aexdvqdxlyhwupxwjzak.supabase.co/rest/v1/";
+const SUPABASE_URL = "https://aexdvqdxlyhwupxwjzak.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_wDXYuuEPqKNrWIh3rj9Jrg_GgnCcNZQ";
 const supabaseClient = window.supabase.createClient(
   SUPABASE_URL,
